@@ -1,0 +1,15 @@
+
+public class IteracionAB {
+	void iteracionConFor(int a,int b) {
+		  for(a=1;a<b;a++)
+			  System.out.println(a);
+	  }
+
+	public static void main(String[] args) {
+	  int a=1;
+	  int b=10;
+	  iteracionConFor(a,b);
+
+	}
+
+}

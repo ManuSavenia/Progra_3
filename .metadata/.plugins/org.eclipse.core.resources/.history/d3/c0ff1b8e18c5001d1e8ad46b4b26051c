@@ -1,0 +1,20 @@
+
+public class IteracionAB {
+	static void iteracionConFor(int a,int b) {
+		  for(a=1;a<b;a++)
+			  System.out.println(a);
+	  }
+	static void iteracionConWhile(int a,int b) {
+		while(a<b) {
+			System.out.println(a);
+			a++;
+		}
+	}
+
+	public static void main(String[] args) {
+	  int a=1;
+	  int b=10;
+	  iteracionConFor(a,b);
+	  iteracionConWhile(a,b);
+	}
+}
