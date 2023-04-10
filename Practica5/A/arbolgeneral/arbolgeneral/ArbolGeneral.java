@@ -108,16 +108,26 @@ public class ArbolGeneral<T> {
 		Cola<ArbolGeneral<T>> cola= new Cola<ArbolGeneral<T>>();
  		ArbolGeneral<T> arbolAux;
 		cola.encolar(this);
+		cola.encolar(null);
 		int max=0;
 		while(!cola.esVacia()){
 			arbolAux = cola.desencolar();
-			if(arbolAux.tieneHijos()){
-				ListaGenericaEnlazada<ArbolGeneral<T>> hijos = (ListaGenericaEnlazada<ArbolGeneral<T>>) arbolAux.getHijos();
-				if(max < hijos.tamanio())
-					max = hijos.tamanio();
-				hijos.comenzar();
-				while(!hijos.fin()){
-					cola.encolar(hijos.proximo());
+			if(arbolAux!=null){
+				result.agregarFinal(arbolAux.getDato());
+				if(arbolAux.tieneHijos()){
+					ListaGenericaEnlazada<ArbolGeneral<T>> hijos = (ListaGenericaEnlazada<ArbolGeneral<T>>) arbolAux.getHijos();
+					hijos.comenzar();
+					while(!hijos.fin()){
+						cola.encolar(hijos.proximo());
+					}
+				}
+			}
+			else{
+				if(!cola.esVacia()){
+					cola.encolar(null);
+					if(max < result.tamanio())
+						max = result.tamanio();
+					result = new ListaGenericaEnlazada<T>();
 				}
 			}
 		}
