@@ -33,51 +33,51 @@ public class Adivinanza {
     }
 
     public static ListaGenericaEnlazada<ListaGenericaEnlazada<String>> secuenciaConMasPreguntas2(
-            ArbolBinario<String> abinario) {
-        ListaGenericaEnlazada<ListaGenericaEnlazada<String>> izq, der;
-        ListaGenericaEnlazada<ListaGenericaEnlazada<String>> res = new ListaGenericaEnlazada<ListaGenericaEnlazada<String>>();
-        if (abinario.esHoja()) {
-            ListaGenericaEnlazada<String> res1 = new ListaGenericaEnlazada<String>();
-            res1.agregarInicio(abinario.getDato());
-            res.agregarInicio(res1);
-            return res;
-        }
-        izq = secuenciaConMasPreguntas2(abinario.getHijoIzquierdo());
-        der = secuenciaConMasPreguntas2(abinario.getHijoDerecho());
-        izq.comenzar();
-        der.comenzar();
-        if (izq.elemento(0).tamanio() > der.elemento(0).tamanio()) {
-            int i = 0;
-            while (izq.elemento(i) != null) {
-                izq.elemento(i).agregarInicio("Si");
-                izq.elemento(i).agregarInicio(abinario.getDato());
-                i++;
-            }
-            return izq;
-        } else if (izq.elemento(0).tamanio() < der.elemento(0).tamanio()) {
-            int i = 0;
-            while (der.elemento(i) != null) {
-                der.elemento(i).agregarInicio("Si");
-                der.elemento(i).agregarInicio(abinario.getDato());
-                i++;
-            }
-            return der;
-        } else {
-            int i = 0;
-            while (izq.elemento(i) != null) {
-                izq.elemento(i).agregarInicio("Si");
-                izq.elemento(i).agregarInicio(abinario.getDato());
-                res.agregarFinal(izq.elemento(i));
-                i++;
-            }
-            i = 0;
-            while (der.elemento(i) != null) {
-                der.elemento(i).agregarInicio("Si");
-                der.elemento(i).agregarInicio(abinario.getDato());
-                res.agregarFinal(der.elemento(i));
-                i++;
-            }
-            return res;
-        }
+      ArbolBinario<String> arbol) {
+    ListaGenericaEnlazada<ListaGenericaEnlazada<String>> lista = new ListaGenericaEnlazada<>();
+    if (arbol.esHoja()) {
+      ListaGenericaEnlazada<String> aux = new ListaGenericaEnlazada<>();
+      aux.agregarInicio(arbol.getDato());
+      lista.agregarInicio(aux);
+      System.out.println(arbol.getDato());
+      return lista;
     }
+    ListaGenericaEnlazada<ListaGenericaEnlazada<String>> listaIzq = new ListaGenericaEnlazada<>();
+    ListaGenericaEnlazada<ListaGenericaEnlazada<String>> listaDer = new ListaGenericaEnlazada<>();
+
+    if (arbol.tieneHijoIzquierdo()) {
+      listaIzq = secuenciaConMasPreguntas2(arbol.getHijoIzquierdo());
+      int i = 0;
+      while (i < listaIzq.tamanio()) {
+        listaIzq.elemento(i).agregarInicio(arbol.getDato());
+        i++;
+      }
+    }
+
+    if (arbol.tieneHijoDerecho()) {
+      listaDer = secuenciaConMasPreguntas2(arbol.getHijoDerecho());
+      int i = 0;
+      while (i < listaDer.tamanio()) {
+        listaDer.elemento(i).agregarInicio(arbol.getDato());
+        i++;
+      }
+    }
+    if (listaIzq.elemento(0) != null && listaDer.elemento(0) != null
+        && listaIzq.elemento(0).tamanio() > listaDer.elemento(0).tamanio()) {
+      return listaIzq;
+    }
+    if (listaDer.elemento(0) != null && listaIzq.elemento(0) != null
+        && listaDer.elemento(0).tamanio() > listaIzq.elemento(0).tamanio()) {
+      return listaDer;
+    }
+    for (int i = 0; i < listaIzq.tamanio(); i++) {
+      lista.agregarFinal(listaIzq.elemento(i));
+    }
+    for (int i = 0; i < listaDer.tamanio(); i++) {
+      lista.agregarFinal(listaDer.elemento(i));
+    }
+
+    return lista;
+  }
+
 }
