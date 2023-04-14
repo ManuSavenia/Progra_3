@@ -11,7 +11,17 @@ public class Main {
         a.getHijos().elemento(1).getHijos().elemento(0).agregarHijo(new ArbolGeneral<Empleado>(new Empleado("Sofia", 5, 4)));
 
         Empresa e = new Empresa(a);
-        System.out.println(e.empleadosPorCategoria(3));
+        System.out.println(e.empleadosPorCategoria(2));
+        System.out.println();
+        System.out.println(e.categoriaConMasempleados());
+        System.out.println();
+        System.out.println(e.cantidadTotalDeEmpleados());
+        System.out.println();
+        e.imprimirporNivel();
+        e.reemplazarPresidente2();
+        System.out.println();
+        System.out.println();
+        e.imprimirporNivel();
     }
 
 }
