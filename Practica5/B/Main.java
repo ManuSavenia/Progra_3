@@ -22,6 +22,25 @@ public class Main {
         System.out.println();
         System.out.println();
         e.imprimirporNivel();
+
+
+
+        RedDeAguaPotable red = new RedDeAguaPotable();
+        ArbolGeneral<Double> arbol = new ArbolGeneral<Double>(null); 
+        arbol.agregarHijo(new ArbolGeneral<Double>(null));
+        arbol.agregarHijo(new ArbolGeneral<Double>(null));
+        arbol.agregarHijo(new ArbolGeneral<Double>(null));
+        arbol.getHijos().elemento(0).agregarHijo(new ArbolGeneral<Double>(null));
+        arbol.getHijos().elemento(0).agregarHijo(new ArbolGeneral<Double>(null));
+        arbol.getHijos().elemento(0).agregarHijo(new ArbolGeneral<Double>(null));
+        arbol.getHijos().elemento(1).agregarHijo(new ArbolGeneral<Double>(null));
+        arbol.getHijos().elemento(1).agregarHijo(new ArbolGeneral<Double>(null));
+        arbol.getHijos().elemento(1).agregarHijo(new ArbolGeneral<Double>(null));
+        System.out.println();
+        System.out.println();
+        System.out.println(red.minimoCaudal(arbol, 4500.0));
+
+
     }
 
 }
