@@ -126,7 +126,7 @@ private boolean DFS3(ListaGenerica<String> res,boolean[] visitados,int i, String
         while(!ady.fin()){
             Arista<String> arista = ady.proximo();
             if(!visitados[arista.verticeDestino().posicion()]){
-                if(DFS(res, visitados, arista.verticeDestino().posicion(), ciudad1, ciudad2)){
+                if(DFS3(res, visitados, arista.verticeDestino().posicion(), ciudad1, ciudad2,distancia + 1)){
                 res.agregarInicio(v.dato());
                 return true;
                 }
