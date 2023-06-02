@@ -147,14 +147,14 @@ public class ArbolBinario<T> {
 	public ListaGenerica<T> frontera() {
 		ListaGenerica<T> l = new ListaGenericaEnlazada<T>();
 		if (!esHoja()) {
-			if (tieneHijoIzquierdo()) {
-				getHijoIzquierdo().frontera();
+			if (this.tieneHijoIzquierdo()) {
+				l = this.getHijoIzquierdo().frontera();
 			}
 			if (tieneHijoDerecho()) {
-				getHijoDerecho().frontera();
+				l = this.getHijoDerecho().frontera();
+
 			}
 		} else {
-			System.out.println(this.getDato());
 			l.agregarFinal(this.getDato());
 		}
 		return l;

@@ -39,5 +39,12 @@ public class ej6 {
       System.out.println("El camino desde Buenos Aires a San Juan exceptuando Rosario es: " + mapa.devolverCaminoExceptuando("Buenos Aires", "San Juan", ciudades));
   //3
       System.out.println("El camino mas corto desde Buenos Aires a San Juan es: " + mapa.caminoMasCorto("Buenos Aires", "San Juan"));
+
+  //4
+      System.out.println("Con el combustible disponible se puede llegar desde Buenos Aires a San Juan: " + mapa.caminoSinCargarCombustible("Buenos Aires", "San Juan", 10));
+
+  //5
+      System.out.println("El camino con menos cargas de combustible desde Buenos Aires a San Juan es: " + mapa.caminoConMenorCargaDeCombustible("Buenos Aires", "San Juan", 10));
+
     }
   }
