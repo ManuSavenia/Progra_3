@@ -59,6 +59,9 @@ Costo [] dijkstraConHeap (Grafo<T> grafo, Vertice<T> v){
     heap.offer(new Heap<T>(v.posicion(), 0));
     while(!heap.isEmpty()){
         Heap<T> min = heap.poll();
+        if(min.getPos()==-1){
+            continue;
+        }
         marca[min.getPos()] = true;
         Vertice<T> vertice = grafo.listaDeVertices().elemento(min.getPos());
         ListaGenerica<Arista<T>> adyacentes = grafo.listaDeAdyacentes(vertice);
@@ -71,7 +74,8 @@ Costo [] dijkstraConHeap (Grafo<T> grafo, Vertice<T> v){
                 if(costoAdy < costos[posAdy].getCostoMinimo()){
                     costos[posAdy].setCostoMinimo(costoAdy);
                     costos[posAdy].setPosVerticeAnterior(min.getPos());
-                    heap.add(new Heap<T>(costos[posAdy].getCostoMinimo(), posAdy));
+                    //heap.add(new Heap<T>(costos[posAdy].getCostoMinimo(), posAdy));
+                    heap.offer(new Heap<T>(posAdy, costos[posAdy].getCostoMinimo()));
                 }
             }
         }
