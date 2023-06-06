@@ -5,6 +5,7 @@ import Clases.Grafos.GrafoImplListAdy;
 import Clases.Grafos.Vertice;
 import Clases.Grafos.VerticeImplListAdy;
 import Clases.Grafos.utils.Costo;
+import Clases.Grafos.utils.CostoTodosMinimos;
 import Clases.Grafos.utils.Dijkstra;
 
 public class DijkstraTest {
@@ -47,6 +48,13 @@ public class DijkstraTest {
         costos = D.dijkstraConHeap(ciudades, v1);
         for (int i = 0; i < costos.length; i++) {
             System.out.println("Vertice " + i + ":\n" + costos[i].toString());
+        }
+
+        System.out.println("\n\n\n\n");
+
+        CostoTodosMinimos[] costos2 = D.dijkstraTodosMinimos(ciudades, v1);
+        for (int i = 0; i < costos2.length; i++) {
+            System.out.println("Vertice " + i + ":\n" + costos2[i].toString());
         }
 
     }

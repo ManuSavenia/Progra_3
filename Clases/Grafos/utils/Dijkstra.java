@@ -85,4 +85,50 @@ public class Dijkstra<T> {
         }
         return costos;
     }
+//------------------------------------------------------------------------------------------------
+public CostoTodosMinimos[] dijkstraTodosMinimos (Grafo<T> grafo, Vertice<T> v){
+    CostoTodosMinimos[] costos = new CostoTodosMinimos[grafo.listaDeVertices().tamanio()];
+    boolean[] marca = new boolean[grafo.listaDeVertices().tamanio()];
+    for (int i = 0; i < grafo.listaDeVertices().tamanio(); i++) {
+        costos[i] = new CostoTodosMinimos();
+        costos[i].setData(new Costo());
+        costos[i].getData().setCostoMinimo(Integer.MAX_VALUE);
+        costos[i].getData().setPosVerticeAnterior(0);
+    }
+    costos[v.posicion()].getData().setCostoMinimo(0);
+    for (int i = 0; i < grafo.listaDeVertices().tamanio(); i++) {
+        int posMin = this.minimoNoMarcado2(costos, marca);
+        marca[posMin] = true;
+        Vertice<T> vertice = grafo.listaDeVertices().elemento(posMin);
+        ListaGenerica<Arista<T>> adyacentes = grafo.listaDeAdyacentes(vertice);
+        adyacentes.comenzar();
+        while (!adyacentes.fin()) {
+            Arista<T> arista = adyacentes.proximo();
+            int posAdy = arista.verticeDestino().posicion();
+            if (!marca[posAdy]) {
+                int costoAdy = costos[posMin].getData().getCostoMinimo() + arista.peso();
+                if (costoAdy < costos[posAdy].getData().getCostoMinimo()) {
+                    costos[posAdy].getData().setCostoMinimo(costoAdy);
+                    costos[posAdy].getData().setPosVerticeAnterior(posMin);
+                }
+                if (costoAdy == costos[posAdy].getData().getCostoMinimo()) {
+                    costos[posAdy].setRepetidos(costos[posAdy].getRepetidos() + 1);
+                }
+            }
+        }
+    }
+    return costos;
+}
+
+private int minimoNoMarcado2(CostoTodosMinimos[] costos, boolean[] marca){
+    int min = Integer.MAX_VALUE;
+    int posMin = -1;
+    for (int i = 0; i < costos.length; i++) {
+        if (!marca[i] && costos[i].getData().getCostoMinimo() < min) {
+            min = costos[i].getData().getCostoMinimo();
+            posMin = i;
+        }
+    }
+    return posMin;
+}
 }
