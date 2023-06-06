@@ -1,6 +1,7 @@
 package Clases.Grafos;
 
-
+import Clases.ListaGenerica.ListaGenerica;
+import Clases.ListaGenerica.ListaGenericaEnlazada;
 
 public class GrafoImplMatrizAdy<T> implements Grafo<T> {
 	private int maxVertices;

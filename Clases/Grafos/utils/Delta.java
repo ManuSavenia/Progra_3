@@ -1,4 +1,10 @@
 package Clases.Grafos.utils;
+
+import Clases.Grafos.Arista;
+import Clases.Grafos.Grafo;
+import Clases.Grafos.Vertice;
+import Clases.ListaGenerica.ListaGenerica;
+
 public class Delta {
 
     public int maxIslasDistintas(Grafo<String> grafo) {

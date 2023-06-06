@@ -1,4 +1,10 @@
 package Clases.Grafos.utils;
+
+import Clases.Grafos.Arista;
+import Clases.Grafos.Grafo;
+import Clases.Grafos.Vertice;
+import Clases.ListaGenerica.ListaGenerica;
+
 public class Algoritmos<T> {
     public boolean subgrafoCuadrado(Grafo<T> grafo){
         boolean estado = false;

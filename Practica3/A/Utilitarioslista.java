@@ -1,4 +1,7 @@
 package Practica3.A;
+
+import Clases.ListaDeEnteros.ListaDeEnterosEnlazada;
+
 public class Utilitarioslista {
 
     public static ListaDeEnterosEnlazada OrdenarNashe(ListaDeEnterosEnlazada l1, int p, int r) {

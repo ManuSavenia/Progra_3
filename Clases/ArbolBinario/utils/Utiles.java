@@ -1,9 +1,14 @@
 package Clases.ArbolBinario.utils;
+
+import Clases.ArbolBinario.ArbolBinario;
+import Clases.ListaGenerica.ListaGenericaEnlazada;
+import Clases.ListaGenerica.utils.Cola;
+
 public class Utiles {
     public Utiles() {
     }
 
-    int sumaMaximaVertical(ArbolBinario<Integer> arbol, int max, int suma) {
+    public int sumaMaximaVertical(ArbolBinario<Integer> arbol, int max, int suma) {
         if (!arbol.esHoja()) {
             suma += arbol.getDato();
             if (arbol.tieneHijoIzquierdo()) {

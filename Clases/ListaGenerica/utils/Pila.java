@@ -1,4 +1,7 @@
 package Clases.ListaGenerica.utils;
+
+import Clases.ListaGenerica.ListaGenericaEnlazada;
+
 public class Pila<T> {
     private ListaGenericaEnlazada<T> lista;
 

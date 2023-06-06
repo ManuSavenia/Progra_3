@@ -1,4 +1,8 @@
 package Clases.Grafos.utils;
+
+import Clases.ListaGenerica.ListaGenerica;
+import Clases.ListaGenerica.ListaGenericaEnlazada;
+
 public class RutaMinima<T> {
   private ListaGenerica<T> ruta;
   private int boletos;

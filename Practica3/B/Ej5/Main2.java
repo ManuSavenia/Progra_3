@@ -1,4 +1,8 @@
 package Practica3.B.Ej5;
+
+import Clases.ListaDeEnteros.ListaDeEnterosEnlazada;
+import Clases.ListaGenerica.utils.Utilitarioslista;
+
 public class Main2 {
     public static void main(String[] args) {
         ListaDeEnterosEnlazada lista1 = new ListaDeEnterosEnlazada();

@@ -1,5 +1,8 @@
 package Clases.Grafos;
 
+import Clases.ListaGenerica.ListaGenerica;
+import Clases.ListaGenerica.ListaGenericaEnlazada;
+
 public class VerticeImplListAdy<T> implements Vertice<T> {
     
 

@@ -1,5 +1,5 @@
-import java.util.Scanner;
 package Practica2;
+import java.util.Scanner;
 public class Multiplos {
 	static int[] getMultiplos(int n) {
 		int[] v = new int[n];

@@ -1,4 +1,9 @@
 package Clases.ArbolBinario;
+
+import Clases.ListaGenerica.ListaGenerica;
+import Clases.ListaGenerica.ListaGenericaEnlazada;
+import Clases.ListaGenerica.utils.Cola;
+
 public class ArbolBinario<T> {
 	private T dato;
 	private ArbolBinario<T> hijoIzquierdo;

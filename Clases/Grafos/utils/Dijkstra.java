@@ -1,7 +1,13 @@
-import java.util.PriorityQueue;
 package Clases.Grafos.utils;
+import java.util.PriorityQueue;
+
+import Clases.Grafos.Arista;
+import Clases.Grafos.Grafo;
+import Clases.Grafos.Vertice;
+import Clases.ListaGenerica.ListaGenerica;
+
 public class Dijkstra<T> {
-    Costo[] dijkstraSinHeap(Grafo<T> grafo, Vertice<T> v) {
+    public Costo[] dijkstraSinHeap(Grafo<T> grafo, Vertice<T> v) {
         Costo[] costos = new Costo[grafo.listaDeVertices().tamanio()];
         boolean[] marca = new boolean[grafo.listaDeVertices().tamanio()];
         for (int i = 0; i < grafo.listaDeVertices().tamanio(); i++) {
@@ -44,39 +50,39 @@ public class Dijkstra<T> {
     }
 
     // ------------------------------------------------------------------------------------------------
-Costo [] dijkstraConHeap (Grafo<T> grafo, Vertice<T> v){
-    Costo[] costos = new Costo[grafo.listaDeVertices().tamanio()];
-    boolean[] marca = new boolean[grafo.listaDeVertices().tamanio()];
-    for (int i = 0; i < grafo.listaDeVertices().tamanio(); i++) {
-        costos[i] = new Costo();
-        costos[i].setCostoMinimo(Integer.MAX_VALUE);
-        costos[i].setPosVerticeAnterior(0);
+    public Costo[] dijkstraConHeap(Grafo<T> grafo, Vertice<T> v) {
+        Costo[] costos = new Costo[grafo.listaDeVertices().tamanio()];
+        boolean[] marca = new boolean[grafo.listaDeVertices().tamanio()];
+        for (int i = 0; i < grafo.listaDeVertices().tamanio(); i++) {
+            costos[i] = new Costo();
+            costos[i].setCostoMinimo(Integer.MAX_VALUE);
+            costos[i].setPosVerticeAnterior(0);
         }
-    PriorityQueue<Heap<T>> heap = new PriorityQueue<Heap<T>>();
-    costos[v.posicion()].setCostoMinimo(0);
-    heap.offer(new Heap<T>(v.posicion(), 0));
-    while(!heap.isEmpty()){
-        Heap<T> min = heap.poll();
-        if(min.getPos()==-1){
-            continue;
-        }
-        marca[min.getPos()] = true;
-        Vertice<T> vertice = grafo.listaDeVertices().elemento(min.getPos());
-        ListaGenerica<Arista<T>> adyacentes = grafo.listaDeAdyacentes(vertice);
-        adyacentes.comenzar();
-        while(!adyacentes.fin()){
-            Arista<T> arista = adyacentes.proximo();
-            int posAdy = arista.verticeDestino().posicion();
-            if(!marca[posAdy]){
-                int costoAdy = costos[min.getPos()].getCostoMinimo() + arista.peso();
-                if(costoAdy < costos[posAdy].getCostoMinimo()){
-                    costos[posAdy].setCostoMinimo(costoAdy);
-                    costos[posAdy].setPosVerticeAnterior(min.getPos());
-                    heap.offer(new Heap<T>(posAdy, costos[posAdy].getCostoMinimo()));
+        PriorityQueue<Heap<T>> heap = new PriorityQueue<Heap<T>>();
+        costos[v.posicion()].setCostoMinimo(0);
+        heap.offer(new Heap<T>(v.posicion(), 0));
+        while (!heap.isEmpty()) {
+            Heap<T> min = heap.poll();
+            if (min.getPos() == -1) {
+                continue;
+            }
+            marca[min.getPos()] = true;
+            Vertice<T> vertice = grafo.listaDeVertices().elemento(min.getPos());
+            ListaGenerica<Arista<T>> adyacentes = grafo.listaDeAdyacentes(vertice);
+            adyacentes.comenzar();
+            while (!adyacentes.fin()) {
+                Arista<T> arista = adyacentes.proximo();
+                int posAdy = arista.verticeDestino().posicion();
+                if (!marca[posAdy]) {
+                    int costoAdy = costos[min.getPos()].getCostoMinimo() + arista.peso();
+                    if (costoAdy < costos[posAdy].getCostoMinimo()) {
+                        costos[posAdy].setCostoMinimo(costoAdy);
+                        costos[posAdy].setPosVerticeAnterior(min.getPos());
+                        heap.offer(new Heap<T>(posAdy, costos[posAdy].getCostoMinimo()));
+                    }
                 }
             }
         }
+        return costos;
     }
-    return costos;
-}
 }

@@ -183,4 +183,16 @@ public class ListaGenericaEnlazada<T> extends ListaGenerica<T> {
 	public boolean esVacia() {
 		return this.tamanio() == 0;
 	}
+	public ListaGenericaEnlazada<T> invertir(ListaGenericaEnlazada<Integer> lista, ListaGenericaEnlazada<Integer> listaInvertida) {
+		ListaGenericaEnlazada<T> invertida = new ListaGenericaEnlazada<T>();
+		recorrer(this.inicio, invertida);
+		return invertida;
+	}
+
+	private void recorrer(NodoGenerico<T> nodo, ListaGenericaEnlazada<T> invertida) {
+		if (nodo != null) {
+			recorrer(nodo.getSiguiente(), invertida);
+			invertida.agregarFinal(nodo.getDato());
+		}
+	}
 }

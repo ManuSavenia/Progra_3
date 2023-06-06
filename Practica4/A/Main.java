@@ -1,4 +1,7 @@
 package Practica4.A;
+
+import Clases.ArbolBinario.ArbolBinario;
+
 public class Main {
 	public static void main(String[] args) {
 		ArbolBinario<Integer> arbolBinarioB = new ArbolBinario<Integer>(1);
@@ -12,7 +15,6 @@ public class Main {
 		arbolBinarioB.agregarHijoDerecho(hijoDerechoB);
 
 		int hojas;
-		boolean lleno;
 		hojas = arbolBinarioB.contarHojas();
 		System.out.println("La cantidad de hojas es: " + hojas);
 		System.out.println(arbolBinarioB.frontera());

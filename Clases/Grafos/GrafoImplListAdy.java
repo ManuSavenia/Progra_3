@@ -1,6 +1,7 @@
 package Clases.Grafos;
 
-
+import Clases.ListaGenerica.ListaGenerica;
+import Clases.ListaGenerica.ListaGenericaEnlazada;
 
 public class GrafoImplListAdy<T> implements Grafo<T> {
     private ListaGenerica<Vertice<T>>vertices = new ListaGenericaEnlazada<Vertice<T>>();

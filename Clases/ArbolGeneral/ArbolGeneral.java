@@ -1,5 +1,9 @@
 package Clases.ArbolGeneral;
 
+import Clases.ListaGenerica.ListaGenerica;
+import Clases.ListaGenerica.ListaGenericaEnlazada;
+import Clases.ListaGenerica.utils.Cola;
+
 public class ArbolGeneral<T> {
 
 	private T dato;

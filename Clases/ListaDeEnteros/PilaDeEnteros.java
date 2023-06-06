@@ -1,7 +1,5 @@
 package Clases.ListaDeEnteros;
 
-import prog3.listaenteros.ListaDeEnteros;
-
 public class PilaDeEnteros {
 
 	ListaDeEnteros datos;

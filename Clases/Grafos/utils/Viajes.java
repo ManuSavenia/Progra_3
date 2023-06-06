@@ -1,4 +1,8 @@
 package Clases.Grafos.utils;
+
+import Clases.ListaGenerica.ListaGenerica;
+import Clases.ListaGenerica.ListaGenericaEnlazada;
+
 public class Viajes {
     ListaGenerica<String> camino;
     int menorPeso;

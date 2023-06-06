@@ -1,7 +1,13 @@
 package Clases.Grafos.utils;
 import java.util.Arrays;
+
+import Clases.Grafos.Arista;
+import Clases.Grafos.Grafo;
+import Clases.Grafos.Vertice;
+import Clases.ListaGenerica.ListaGenerica;
+import Clases.ListaGenerica.utils.Cola;
 public class GradosDeSeparacion {
-    int maximoGradoDeSeparacion(Grafo<String> grafo) {
+    public int maximoGradoDeSeparacion(Grafo<String> grafo) {
         Cola<Vertice<String>> cola = new Cola<Vertice<String>>();
         int max = 0;
         int i;

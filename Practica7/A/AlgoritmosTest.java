@@ -1,4 +1,11 @@
 package Practica7.A;
+
+import Clases.Grafos.Grafo;
+import Clases.Grafos.GrafoImplListAdy;
+import Clases.Grafos.Vertice;
+import Clases.Grafos.VerticeImplListAdy;
+import Clases.Grafos.utils.Algoritmos;
+
 public class AlgoritmosTest {
     public static void main(String[] args) {
         Vertice<String> v1 = new VerticeImplListAdy<String>("Buenos Aires");

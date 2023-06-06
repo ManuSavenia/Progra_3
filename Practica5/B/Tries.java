@@ -1,4 +1,10 @@
 package Practica5.B;
+
+import Clases.ArbolGeneral.ArbolGeneral;
+import Clases.ListaGenerica.ListaGenerica;
+import Clases.ListaGenerica.ListaGenericaEnlazada;
+import Clases.ListaGenerica.utils.Cola;
+
 public class Tries {
     private ArbolGeneral<Character> trie;
 

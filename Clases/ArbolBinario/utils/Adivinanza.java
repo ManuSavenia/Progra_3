@@ -1,9 +1,13 @@
 package Clases.ArbolBinario.utils;
+
+import Clases.ArbolBinario.ArbolBinario;
+import Clases.ListaGenerica.ListaGenericaEnlazada;
+
 public class Adivinanza {
     public Adivinanza() {
     }
 
-    public static ListaGenericaEnlazada<String> secuenciaConMasPreguntas(ArbolBinario<String> abinario) {
+    public ListaGenericaEnlazada<String> secuenciaConMasPreguntas(ArbolBinario<String> abinario) {
         if (abinario.esVacio()) {
             return null;
         }

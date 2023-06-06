@@ -1,7 +1,14 @@
 package Clases.Grafos.utils;
 
+import Clases.Grafos.Arista;
+import Clases.Grafos.Grafo;
+import Clases.Grafos.Vertice;
+import Clases.ListaGenerica.ListaGenerica;
+import Clases.ListaGenerica.ListaGenericaEnlazada;
+import Clases.ListaGenerica.utils.Cola;
+
 public class Recorridos<T> {
-ListaGenerica<Vertice<T>> DFS(Grafo<T> grafo){
+public ListaGenerica<Vertice<T>> DFS(Grafo<T> grafo){
     ListaGenerica<Vertice<T>> res = new ListaGenericaEnlazada<Vertice<T>>();
     boolean[] visitados = new boolean[grafo.listaDeVertices().tamanio()];
     ListaGenerica<Vertice<T>> vertices = grafo.listaDeVertices();
@@ -30,7 +37,7 @@ private void DFS(Grafo<T> grafo, ListaGenerica<Vertice<T>> res,boolean[] visitad
     }
 }
 
-ListaGenerica<Vertice<T>> BFS(Grafo<T> grafo){
+public ListaGenerica<Vertice<T>> BFS(Grafo<T> grafo){
     Cola <Vertice<T>> cola = new Cola<Vertice<T>>();
     ListaGenerica<Vertice<T>> res = new ListaGenericaEnlazada<Vertice<T>>();
     boolean[] visitados = new boolean[grafo.listaDeVertices().tamanio()];

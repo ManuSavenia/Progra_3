@@ -1,4 +1,11 @@
 package Clases.Grafos.utils;
+
+import Clases.Grafos.Arista;
+import Clases.Grafos.Grafo;
+import Clases.Grafos.Vertice;
+import Clases.ListaGenerica.ListaGenerica;
+import Clases.ListaGenerica.ListaGenericaEnlazada;
+
 public class mapa {
     Grafo<String> mapaCiudades;
 
@@ -7,7 +14,7 @@ public class mapa {
     }
 
     // ----------------------------------------------------------------------------------------------------------------------
-    ListaGenerica<String> devolverCamino(String ciudad1, String ciudad2) {
+    public ListaGenerica<String> devolverCamino(String ciudad1, String ciudad2) {
         ListaGenerica<String> camino = new ListaGenericaEnlazada<String>();
         camino.comenzar();
         ListaGenerica<Vertice<String>> ciudades = mapaCiudades.listaDeVertices();
@@ -49,7 +56,7 @@ public class mapa {
     }
     // ----------------------------------------------------------------------------------------------------------------------
 
-    ListaGenerica<String> devolverCaminoExceptuando(String ciudad1, String ciudad2, ListaGenerica<String> ciudades) {
+    public ListaGenerica<String> devolverCaminoExceptuando(String ciudad1, String ciudad2, ListaGenerica<String> ciudades) {
         ListaGenerica<String> camino = new ListaGenericaEnlazada<String>();
         camino.comenzar();
         ListaGenerica<Vertice<String>> Ciudades = mapaCiudades.listaDeVertices();
@@ -96,7 +103,7 @@ public class mapa {
     }
     // ----------------------------------------------------------------------------------------------------------------------
 
-    ListaGenerica<String> caminoMasCorto(String ciudad1, String ciudad2) {
+    public ListaGenerica<String> caminoMasCorto(String ciudad1, String ciudad2) {
         ListaGenerica<String> camino = new ListaGenericaEnlazada<String>();
         ListaGenerica<String> l = new ListaGenericaEnlazada<String>();
         ListaGenerica<Vertice<String>> ciudades = mapaCiudades.listaDeVertices();
@@ -147,7 +154,7 @@ public class mapa {
 
     // ----------------------------------------------------------------------------------------------------------------------
 
-    ListaGenerica<String> caminoSinCargarCombustible(String ciudad1, String ciudad2, int tanqueAuto) {
+    public ListaGenerica<String> caminoSinCargarCombustible(String ciudad1, String ciudad2, int tanqueAuto) {
         ListaGenerica<String> camino = new ListaGenericaEnlazada<String>();
         camino.comenzar();
         ListaGenerica<Vertice<String>> ciudades = mapaCiudades.listaDeVertices();
@@ -193,7 +200,7 @@ public class mapa {
 
     // ----------------------------------------------------------------------------------------------------------------------
 
-    ListaGenerica<String> caminoConMenorCargaDeCombustible(String ciudad1, String ciudad2, int tanqueAuto) {
+    public ListaGenerica<String> caminoConMenorCargaDeCombustible(String ciudad1, String ciudad2, int tanqueAuto) {
         ListaGenerica<String> camino = new ListaGenericaEnlazada<String>();
         ListaGenerica<String> l = new ListaGenericaEnlazada<String>();
         camino.comenzar();

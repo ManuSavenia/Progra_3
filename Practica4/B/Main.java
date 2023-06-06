@@ -1,4 +1,9 @@
 package Practica4.B;
+
+import Clases.ArbolBinario.ArbolBinario;
+import Clases.ArbolBinario.utils.Adivinanza;
+import Clases.ArbolBinario.utils.Utiles;
+
 public class Main {
 	public static void main(String[] args) {
 		ArbolBinario<Integer> arbolBinarioA = new ArbolBinario<Integer>(1);
