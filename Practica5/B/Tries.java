@@ -1,3 +1,4 @@
+package Practica5.B;
 public class Tries {
     private ArbolGeneral<Character> trie;
 

@@ -1,3 +1,4 @@
+package Clases.ListaGenerica.utils;
 public class Utilitarioslista {
 
     public static ListaDeEnterosEnlazada OrdenarNashe(ListaDeEnterosEnlazada l1, int p, int r) {

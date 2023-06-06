@@ -1,4 +1,4 @@
-package prog3.listagenerica;
+package Clases.ListaGenerica;
 
 /**
  * La clase ListaGenericaEnlazada es una ListaGenerica, donde los elementos de

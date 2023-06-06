@@ -1,3 +1,4 @@
+package Practica5.A;
 public class Test {
     public static void main(String[] args){
         ArbolGeneral<Integer> a = new ArbolGeneral<Integer>(1);

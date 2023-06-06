@@ -1,4 +1,4 @@
-
+package Clases.ArbolGeneral;
 
 public class ArbolGeneral<T> {
 

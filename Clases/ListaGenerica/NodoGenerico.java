@@ -1,4 +1,4 @@
-package prog3.listagenerica;
+package Clases.ListaGenerica;
 /**
  * Esta clase representa un nodo de la lista de enteros enlazada.
  * */

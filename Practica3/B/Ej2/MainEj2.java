@@ -1,3 +1,4 @@
+package Practica3.B.Ej2;
 public class MainEj2 {
     public static void main(String[] args) {
         ListaGenericaEnlazada<Integer> lista = new ListaGenericaEnlazada<Integer>();

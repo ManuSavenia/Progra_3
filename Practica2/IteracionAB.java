@@ -1,4 +1,4 @@
-
+package Practica2;
 public class IteracionAB {
 	static void iteracionConFor(int a,int b) {
 		  for(a=1;a<b;a++)

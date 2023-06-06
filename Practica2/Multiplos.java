@@ -1,4 +1,5 @@
 import java.util.Scanner;
+package Practica2;
 public class Multiplos {
 	static int[] getMultiplos(int n) {
 		int[] v = new int[n];

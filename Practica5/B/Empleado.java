@@ -1,3 +1,4 @@
+package Practica5.B;
 public class Empleado extends Empresa{
     private String nombre;
     private int antiguedad;

@@ -1,4 +1,4 @@
-package prog3.util;
+package Clases.ListaDeEnteros;
 
 import prog3.listaenteros.ListaDeEnteros;
 

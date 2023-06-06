@@ -1,3 +1,4 @@
+package Practica3.B.Ej5;
 public class Main {
     public static void main(String[] args) {
         ListaDeEnterosEnlazada lista1 = new ListaDeEnterosEnlazada();

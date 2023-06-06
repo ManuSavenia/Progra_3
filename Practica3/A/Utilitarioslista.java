@@ -1,3 +1,4 @@
+package Practica3.A;
 public class Utilitarioslista {
 
     public static ListaDeEnterosEnlazada OrdenarNashe(ListaDeEnterosEnlazada l1, int p, int r) {

@@ -1,3 +1,4 @@
+package Practica5.B;
 public class Empresa {
     private ArbolGeneral<Empleado> empleados;
 

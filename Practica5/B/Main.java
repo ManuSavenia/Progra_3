@@ -1,3 +1,4 @@
+package Practica5.B;
 public class Main {
     public static void main(String[] args) {
         ArbolGeneral<Empleado> a = new ArbolGeneral<Empleado>(new Empleado("Juan", 10, 1));

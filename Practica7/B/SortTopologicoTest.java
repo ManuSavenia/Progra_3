@@ -1,3 +1,4 @@
+package Practica7.B;
 public class SortTopologicoTest {
     public static void main(String[] args) {
         Vertice<String> v1 = new VerticeImplListAdy<String>("boxer");

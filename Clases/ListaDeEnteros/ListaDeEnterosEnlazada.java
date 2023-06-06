@@ -1,4 +1,4 @@
-
+package Clases.ListaDeEnteros;
 /**
  * La clase ListaDeEnterosEnlazada es una ListaDeEnteros, donde los elementos de
  * la lista (nodos) referencian al siguiente elemento (nodo), por este motivo,

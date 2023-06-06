@@ -1,3 +1,4 @@
+package Practica4.A;
 public class Main {
 	public static void main(String[] args) {
 		ArbolBinario<Integer> arbolBinarioB = new ArbolBinario<Integer>(1);

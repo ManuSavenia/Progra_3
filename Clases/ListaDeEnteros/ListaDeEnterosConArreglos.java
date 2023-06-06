@@ -1,4 +1,4 @@
-
+package Clases.ListaDeEnteros;
 /**
  * La clase ListaDeEnterosConArreglos es una ListaDeEnteros con capacidad fija y
  * limitada.

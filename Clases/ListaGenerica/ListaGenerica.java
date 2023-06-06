@@ -1,4 +1,4 @@
-package prog3.listagenerica;
+package Clases.ListaGenerica;
 
 /**
  * ListaDeEnteros es una clase abstracta que define los métodos que deberán
