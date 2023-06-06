@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FloydTest",
+            "request": "launch",
+            "mainClass": "Practica7.B.FloydTest",
+            "projectName": "Progra_3_caab6ea9"
+        },
+        {
+            "type": "java",
             "name": "DijkstraTest",
             "request": "launch",
             "mainClass": "Practica7.B.DijkstraTest",
