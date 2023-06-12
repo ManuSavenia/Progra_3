@@ -3,6 +3,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Test7",
+            "request": "launch",
+            "mainClass": "Parciales.Test7",
+            "projectName": "Progra_3_caab6ea9"
+        },
+        {
+            "type": "java",
+            "name": "Test6",
+            "request": "launch",
+            "mainClass": "Parciales.Test6",
+            "projectName": "Progra_3_caab6ea9"
+        },
+        {
+            "type": "java",
+            "name": "Test5",
+            "request": "launch",
+            "mainClass": "Parciales.Test5",
+            "projectName": "Progra_3_caab6ea9"
+        },
+        {
+            "type": "java",
+            "name": "Test4",
+            "request": "launch",
+            "mainClass": "Parciales.Test4",
+            "projectName": "Progra_3_caab6ea9"
+        },
+        {
+            "type": "java",
+            "name": "Test3",
+            "request": "launch",
+            "mainClass": "Parciales.Test3",
+            "projectName": "Progra_3_caab6ea9"
+        },
+        {
+            "type": "java",
+            "name": "Test2",
+            "request": "launch",
+            "mainClass": "Parciales.Test2",
+            "projectName": "Progra_3_caab6ea9"
+        },
+        {
+            "type": "java",
+            "name": "Test",
+            "request": "launch",
+            "mainClass": "Parciales.Test",
+            "projectName": "Progra_3_caab6ea9"
+        },
+        {
+            "type": "java",
             "name": "FloydTest",
             "request": "launch",
             "mainClass": "Practica7.B.FloydTest",
